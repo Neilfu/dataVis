@@ -1,0 +1,94 @@
+11-06 16:34:42 log.py[line:107]                 [32mselect version()[39;49;0m
+11-06 16:34:42 log.py[line:107]                 [32m{}[39;49;0m
+11-06 16:34:42 log.py[line:107]                 [32mselect current_schema()[39;49;0m
+11-06 16:34:42 log.py[line:107]                 [32m{}[39;49;0m
+11-06 16:34:42 log.py[line:107]                 [32mSELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1[39;49;0m
+11-06 16:34:42 log.py[line:107]                 [32m{}[39;49;0m
+11-06 16:34:42 log.py[line:107]                 [32mSELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1[39;49;0m
+11-06 16:34:42 log.py[line:107]                 [32m{}[39;49;0m
+11-06 16:34:42 log.py[line:107]                 [32mshow standard_conforming_strings[39;49;0m
+11-06 16:34:42 log.py[line:107]                 [32m{}[39;49;0m
+11-06 16:36:02 log.py[line:107]                 [32mselect version()[39;49;0m
+11-06 16:36:02 log.py[line:107]                 [32m{}[39;49;0m
+11-06 16:36:02 log.py[line:107]                 [32mselect current_schema()[39;49;0m
+11-06 16:36:02 log.py[line:107]                 [32m{}[39;49;0m
+11-06 16:36:02 log.py[line:107]                 [32mSELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1[39;49;0m
+11-06 16:36:02 log.py[line:107]                 [32m{}[39;49;0m
+11-06 16:36:02 log.py[line:107]                 [32mSELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1[39;49;0m
+11-06 16:36:02 log.py[line:107]                 [32m{}[39;49;0m
+11-06 16:36:02 log.py[line:107]                 [32mshow standard_conforming_strings[39;49;0m
+11-06 16:36:02 log.py[line:107]                 [32m{}[39;49;0m
+11-06 16:50:18 log.py[line:107]                 [32mselect version()[39;49;0m
+11-06 16:50:18 log.py[line:107]                 [32m{}[39;49;0m
+11-06 16:50:18 log.py[line:107]                 [32mselect current_schema()[39;49;0m
+11-06 16:50:18 log.py[line:107]                 [32m{}[39;49;0m
+11-06 16:50:18 log.py[line:107]                 [32mSELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1[39;49;0m
+11-06 16:50:18 log.py[line:107]                 [32m{}[39;49;0m
+11-06 16:50:18 log.py[line:107]                 [32mSELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1[39;49;0m
+11-06 16:50:18 log.py[line:107]                 [32m{}[39;49;0m
+11-06 16:50:18 log.py[line:107]                 [32mshow standard_conforming_strings[39;49;0m
+11-06 16:50:18 log.py[line:107]                 [32m{}[39;49;0m
+11-06 16:53:48 log.py[line:107]                 [32mselect version()[39;49;0m
+11-06 16:53:48 log.py[line:107]                 [32m{}[39;49;0m
+11-06 16:53:48 log.py[line:107]                 [32mselect current_schema()[39;49;0m
+11-06 16:53:48 log.py[line:107]                 [32m{}[39;49;0m
+11-06 16:53:48 log.py[line:107]                 [32mSELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1[39;49;0m
+11-06 16:53:48 log.py[line:107]                 [32m{}[39;49;0m
+11-06 16:53:48 log.py[line:107]                 [32mSELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1[39;49;0m
+11-06 16:53:48 log.py[line:107]                 [32m{}[39;49;0m
+11-06 16:53:48 log.py[line:107]                 [32mshow standard_conforming_strings[39;49;0m
+11-06 16:53:48 log.py[line:107]                 [32m{}[39;49;0m
+11-06 16:54:48 log.py[line:107]                 [32mselect version()[39;49;0m
+11-06 16:54:48 log.py[line:107]                 [32m{}[39;49;0m
+11-06 16:54:48 log.py[line:107]                 [32mselect current_schema()[39;49;0m
+11-06 16:54:48 log.py[line:107]                 [32m{}[39;49;0m
+11-06 16:54:48 log.py[line:107]                 [32mSELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1[39;49;0m
+11-06 16:54:48 log.py[line:107]                 [32m{}[39;49;0m
+11-06 16:54:48 log.py[line:107]                 [32mSELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1[39;49;0m
+11-06 16:54:48 log.py[line:107]                 [32m{}[39;49;0m
+11-06 16:54:48 log.py[line:107]                 [32mshow standard_conforming_strings[39;49;0m
+11-06 16:54:48 log.py[line:107]                 [32m{}[39;49;0m
+11-06 17:31:26 log.py[line:107]                 [32mselect version()[39;49;0m
+11-06 17:31:26 log.py[line:107]                 [32m{}[39;49;0m
+11-06 17:31:26 log.py[line:107]                 [32mselect current_schema()[39;49;0m
+11-06 17:31:26 log.py[line:107]                 [32m{}[39;49;0m
+11-06 17:31:26 log.py[line:107]                 [32mSELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1[39;49;0m
+11-06 17:31:26 log.py[line:107]                 [32m{}[39;49;0m
+11-06 17:31:26 log.py[line:107]                 [32mSELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1[39;49;0m
+11-06 17:31:26 log.py[line:107]                 [32m{}[39;49;0m
+11-06 17:31:26 log.py[line:107]                 [32mshow standard_conforming_strings[39;49;0m
+11-06 17:31:26 log.py[line:107]                 [32m{}[39;49;0m
+11-06 17:34:52 log.py[line:107]                 [32mselect version()[39;49;0m
+11-06 17:34:52 log.py[line:107]                 [32m{}[39;49;0m
+11-06 17:34:52 log.py[line:107]                 [32mselect current_schema()[39;49;0m
+11-06 17:34:52 log.py[line:107]                 [32m{}[39;49;0m
+11-06 17:34:52 log.py[line:107]                 [32mSELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1[39;49;0m
+11-06 17:34:52 log.py[line:107]                 [32m{}[39;49;0m
+11-06 17:34:52 log.py[line:107]                 [32mSELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1[39;49;0m
+11-06 17:34:52 log.py[line:107]                 [32m{}[39;49;0m
+11-06 17:34:52 log.py[line:107]                 [32mshow standard_conforming_strings[39;49;0m
+11-06 17:34:52 log.py[line:107]                 [32m{}[39;49;0m
+11-06 17:38:15 log.py[line:107]                 [32mselect version()[39;49;0m
+11-06 17:38:15 log.py[line:107]                 [32m{}[39;49;0m
+11-06 17:38:15 log.py[line:107]                 [32mselect current_schema()[39;49;0m
+11-06 17:38:15 log.py[line:107]                 [32m{}[39;49;0m
+11-06 17:38:15 log.py[line:107]                 [32mSELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1[39;49;0m
+11-06 17:38:15 log.py[line:107]                 [32m{}[39;49;0m
+11-06 17:38:15 log.py[line:107]                 [32mSELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1[39;49;0m
+11-06 17:38:15 log.py[line:107]                 [32m{}[39;49;0m
+11-06 17:38:15 log.py[line:107]                 [32mshow standard_conforming_strings[39;49;0m
+11-06 17:38:15 log.py[line:107]                 [32m{}[39;49;0m
+11-06 17:38:16 log.py[line:107]                 [32mSELECT relname FROM pg_class c WHERE relkind = 'r' AND 'public' = (select nspname from pg_namespace n where n.oid = c.relnamespace) [39;49;0m
+11-06 17:38:16 log.py[line:107]                 [32m{}[39;49;0m
+11-06 18:16:15 log.py[line:107]                 [32mselect version()[39;49;0m
+11-06 18:16:15 log.py[line:107]                 [32m{}[39;49;0m
+11-06 18:16:15 log.py[line:107]                 [32mselect current_schema()[39;49;0m
+11-06 18:16:15 log.py[line:107]                 [32m{}[39;49;0m
+11-06 18:16:15 log.py[line:107]                 [32mSELECT CAST('test plain returns' AS VARCHAR(60)) AS anon_1[39;49;0m
+11-06 18:16:15 log.py[line:107]                 [32m{}[39;49;0m
+11-06 18:16:15 log.py[line:107]                 [32mSELECT CAST('test unicode returns' AS VARCHAR(60)) AS anon_1[39;49;0m
+11-06 18:16:15 log.py[line:107]                 [32m{}[39;49;0m
+11-06 18:16:15 log.py[line:107]                 [32mshow standard_conforming_strings[39;49;0m
+11-06 18:16:15 log.py[line:107]                 [32m{}[39;49;0m
+11-06 18:16:15 log.py[line:107]                 [32mSELECT relname FROM pg_class c WHERE relkind = 'r' AND 'public' = (select nspname from pg_namespace n where n.oid = c.relnamespace) [39;49;0m
+11-06 18:16:15 log.py[line:107]                 [32m{}[39;49;0m

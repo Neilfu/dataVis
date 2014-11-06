@@ -1,20 +1,18 @@
-define([
-	'app/widget/region/operate/controller'
-], function (c) {
+define(['app/widget/region/operate/controller'], function(c) {
 
-	DataInsightManager.module("OperateRegion"
-        , function(OperateRegion, DataInsightManager, Backbone, Marionette, $, _) {
+			DataInsightManager.module("OperateRegion", function(OperateRegion,
+							DataInsightManager, Backbone, Marionette, $, _) {
 
-	  //定义接口
-	  var API = {
-		showOperateView: function(){
-	    	new OperateRegion.Controller();
-	    }
-	  };
+						// 定义接口
+						var API = {
+							showOperateView : function() {
+								new OperateRegion.Controller();
+							}
+						};
 
-	  //监听页面start
-	  DataInsightManager.on("start", function(){
-	    API.showOperateView();
-	  });
-	})
-});
+						// 监听页面start
+						DataInsightManager.on("start", function() {
+									API.showOperateView();
+								});
+					})
+		});

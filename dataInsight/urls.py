@@ -7,8 +7,9 @@ urlpatterns = patterns('',
     # url(r'^$', 'dataInsight.views.home', name='home'),
     # url(r'^blog/', include('blog.urls')),
 
-    url(r'^admin/', include(admin.site.urls)),
-    url(r'^widget/',     include('widget.url', namespace="widget")),
+    url(r'^admin/',         include(admin.site.urls)),
+    url(r'^widget/',        include('widget.url', namespace="widget")),
+    url(r'^data/',            include('data.url', namespace="data")),
 )
 
 urlpatterns += staticfiles_urlpatterns()

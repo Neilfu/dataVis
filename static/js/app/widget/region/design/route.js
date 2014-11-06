@@ -1,21 +1,21 @@
-define([
-	'app/widget/region/design/controller'
-], function (c) {
+define(['app/widget/region/design/controller'], function(c) {
 
-	var data = DataInsightManager.module("DesignRegion", function(DesignRegion, DataInsightManager, Backbone, Marionette, $, _){
+			var data = DataInsightManager.module("DesignRegion", function(
+							DesignRegion, DataInsightManager, Backbone,
+							Marionette, $, _) {
 
-	  //////////////////////////////////////////////////////////定义接口
-	  var API = {
-		showDesingView: function(){
-	    	new DesignRegion.Controller();
-	    }
-	  };
+						// ////////////////////////////////////////////////////////定义接口
+						var API = {
+							showDesingView : function() {
+								new DesignRegion.Controller();
+							}
+						};
 
-	  //////////////////////////////////////////////////////////监听页面start
-	  DataInsightManager.on("start", function(){
-	    API.showDesingView();
-	  });
-	});
+						// ////////////////////////////////////////////////////////监听页面start
+						DataInsightManager.on("start", function() {
+									API.showDesingView();
+								});
+					});
 
-	return data;
-});
+			return data;
+		});

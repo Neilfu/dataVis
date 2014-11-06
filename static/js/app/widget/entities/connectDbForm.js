@@ -8,7 +8,7 @@
 	    function(Entities, DataInsightManager, Backbone, Marionette, $, _){
 
 		Entities.connectForm = Backbone.Model.extend({
-			url: "/connect/db/",
+			url: "/data/tableList/",
 			defaults: {
 				"ip": 		"127.0.0.1",
 				"port": 	"5432",
@@ -40,15 +40,9 @@
 		    }
 		}); 
 
-		var API = {
-			getConnectEntity: function(){
-				 var connectEntity = new Entities.connectForm();
-				 return connectEntity;
-			},
-		}
-
 		DataInsightManager.reqres.setHandler("connect:entity", function(){
-				return API.getConnectEntity();
+
+			return new Entities.connectForm();
 		});
 	});
 

@@ -1,4 +1,8 @@
 eclipse.preferences.version=1
 encoding//common/head.py=utf-8
+encoding//common/log.py=utf-8
+encoding//data/models.py=utf-8
+encoding//data/sqltool.py=utf-8
+encoding//data/views.py=utf-8
 encoding//dataInsight/settings.py=utf-8
 encoding/<project>=UTF-8
