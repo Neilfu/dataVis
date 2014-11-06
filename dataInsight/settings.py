@@ -1,3 +1,5 @@
+# -*-encoding: utf-8 =*-
+
 """
 Django settings for dataInsight project.
 
@@ -12,6 +14,10 @@ https://docs.djangoproject.com/en/1.7/ref/settings/
 import os
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
+PROJECT_ROOT_PATH       = BASE_DIR
+STATIC_PATH             = os.path.join(PROJECT_ROOT_PATH, "static")
+TEMPLATE_PATH           = os.path.join(PROJECT_ROOT_PATH, "template")
+LOG_PATH                = os.path.join(PROJECT_ROOT_PATH, 'log')
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.7/howto/deployment/checklist/
@@ -36,6 +42,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'widget',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -58,8 +65,12 @@ WSGI_APPLICATION = 'dataInsight.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',#'django.db.backends.sqlite3',  # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
+        'NAME': 'dataInsight',                      # Or path to database file if using sqlite3.
+        'USER': 'postgres',
+        'PASSWORD': '123',
+        'HOST': '127.0.0.1',                      # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
+        'PORT': '5432',            
     }
 }
 
@@ -81,3 +92,14 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
 
 STATIC_URL = '/static/'
+# Additional locations of static files
+STATICFILES_DIRS = (
+    # Put strings here, like "/home/html/static" or "C:/www/django/static".
+    # Always use forward slashes, even on Windows.
+    # Don't forget to use absolute paths, not relative paths.
+    STATIC_PATH,
+)
+
+TEMPLATE_DIRS = (
+    TEMPLATE_PATH,
+)

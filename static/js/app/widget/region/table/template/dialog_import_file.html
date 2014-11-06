@@ -1,0 +1,47 @@
+<script type="text/template">
+<div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="new_table_title">通过数据文件导入数据</h4>
+      </div>
+
+      <div class="modal-body">
+      		<div id="import_file_form">
+				<p>
+					<label>文件：</label> 
+					<input id="importfile" name="file" type="file">
+				</p>
+				<p>
+					<label>类型：</label> 
+					<select id="import_file_type">
+						<option value="csv">csv</option>
+						<option value="xlsx">excel</option>
+					</select>
+				</p>
+				<p>
+					<label>首行包含列名：</label> 
+					<select id="import_file_attr">
+						<option value="1">是</option>
+						<option value="0">否</option>
+					</select>
+				</p>
+				<p>
+					<label>编码：</label> 
+					<select id="import_file_code">
+						<option value="UTF-8">UTF-8</option>
+						<option value="UTF-16">UTF-16</option>
+						<option value="GBK">GBK</option>
+						<option value="GBK2312">GBK2312</option>
+						<option value="ASCII">ASCII</option>
+					</select>
+				</p>
+			</div>
+      </div>
+
+       <div class="modal-footer">
+        <div class="import-file-tip">请选择文件！</div>
+      	<button type="button" class="import-file-commit btn btn-primary">确定</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+      </div>
+</div>
+</script>

@@ -1,0 +1,17 @@
+<script>
+	<div id="field_template_header" class="panel-heading">字段名<span class="glyphicon glyphicon-new-window"></div>
+	<ul id="field_template_content">
+	<% _.each(items, function(item){ %>
+        <li class="field-item" data-id ="<%= item.id %>" id="filed_<%=item.fieldName%>" data-filedname="<%=item.fieldName%>" data-axisitem='{"table":"<%=$(".table-item-choosed").data("table")%>" ,"name": "<%= item.fieldName%>", "kind": "<%=item.type%>"}'> 
+        	<% if(item.nickName == "") { %>
+        		<span class="badge"><%= item.type %></span>
+        		&nbsp;<%= item.fieldName %>
+        	<% } %>
+        	<% if(item.nickName !== "") { %>
+        		<span class="badge"><%= item.type %></span>
+        		&nbsp;<%= item.nickName %>
+        	<% } %>
+        </li>
+    <% }); %>
+	</ul>
+</script>

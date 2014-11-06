@@ -1,0 +1,195 @@
+<script  id="graph-view">
+	<div class="row">
+		<div class="col-md-2 col-sm-2">
+			<div class="dropdown">
+ 			 <button id="graph" type="button" class="choosed-chart-style chart-<%=graph%>" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  			 </button>
+ 			 <ul class="dropdown-menu select-graph clearfix" role="menu" aria-labelledby="graph">
+    			<li><button href="#" data-graph="bar" class="btn charts chart-bar"></button></li>
+				<li><button href="#" data-graph="line" class="btn charts chart-line"></button></li>
+				<li><button href="#" data-graph="area" class="btn charts chart-area"></button></li>
+				<li><button href="#" data-graph="gauge" class="btn charts chart-gauge"></button></li>
+				<li><button href="#" data-graph="map" class="btn charts chart-map"></button></li>
+				<li><button href="#" data-graph="pie" class="btn charts chart-pie"></button></li>
+				<li><button href="#" data-graph="radar" class="btn charts chart-radar"></button></li>
+				<li><button href="#" data-graph="scatter" class="btn charts chart-scatter"></button></li>
+				<li><button href="#" data-graph="table" class="btn charts chart-table"></button></li>
+  			</ul>
+			</div>
+			
+		</div>
+		<div class="col-md-5 col-sm-5" style="padding: 0">
+			<div class="dragging-custom design-column clearfix">
+				<div class="test">纵轴</div>
+				<ul id="y_sortable" ondragover="return false" class="connectedSortable clearfix ">
+					<% _.each(y, function(yItem, index){ %>
+   					 	<li class="mension" type="mension" data-axisitem='<%=JSON.stringify(yItem)%>'> 
+							<!--(<%=yItem.calcFunc%>)-->
+							&nbsp;<%= yItem.name %>
+							<b data-toggle="dropdown" class="glyphicon glyphicon-plus-sign dropdown-toggle"></b> 
+							<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+								<li class="coordinate-edit"><a data-yItem='<%=JSON.stringify(yItem)%>' href="#"><i class="glyphicon glyphicon-edit"></i>&nbsp;编辑</a></li>
+								<li class="coordinate-filter coordinate-hover">
+									<a href="#"><i class="glyphicon glyphicon-play"></i>&nbsp;计算</a>
+									<ul class="dropdown-menu">
+							          	<li value="none" class="active">
+							          		<a tabindex="-1" href="#">无</a>
+							          	</li>
+										<li value="sum">
+											<a tabindex="-1" href="#">求和</a>
+										</li>
+										<li value="count">
+											<a tabindex="-1" href="#">统计个数</a>
+										</li>
+										<li value="mean">
+											<a tabindex="-1" href="#">平均值</a>
+										</li>
+										<li value="max">
+											<a tabindex="-1" href="#">最大值</a>
+										</li>
+										<li value="min">
+											<a tabindex="-1" href="#">最小值</a>
+										</li>
+										<li value="median">
+											<a tabindex="-1" href="#">中位值</a>
+										</li>
+							        </ul>
+								</li>
+								<li class="coordinate-filter"><a href="#"><i class="glyphicon glyphicon-filter"></i>&nbsp;筛选</a></li>
+								<li class="coordinate-remove"><a data-yItem='<%=JSON.stringify(yItem)%>' href="#"><i class="glyphicon glyphicon-remove"></i>&nbsp;移除</a></li>
+							</ul>
+						</li>
+    				<% }); %>
+				</ul>
+			</div>
+			<div class="dragging-custom design-column clearfix" style="margin-top: 18px;">
+				<div class="test">横轴</div>
+				<ul id="x_sortable" ondragover="return false" class="connectedSortable  clearfix">
+					<% _.each(x, function(xItem){ %>
+   					 	<li class="measure" type="measure" data-axisitem='<%=JSON.stringify(xItem)%>'> 
+							<!--(<%=xItem.calcFunc%>)&nbsp;-->
+							<%= xItem.name %>
+							<b data-toggle="dropdown" class="glyphicon glyphicon-plus-sign dropdown-toggle"></b>
+							<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+								<li class="coordinate-edit"><a  data-xItem='<%=JSON.stringify(xItem)%>' href="#"><i class="glyphicon glyphicon-edit"></i>&nbsp;编辑</a></li>
+								<li class="coordinate-filter coordinate-hover">
+									<a href="#"><i class="glyphicon glyphicon-play"></i>&nbsp;计算</a>
+									<ul class="dropdown-menu">
+							          	<li value="none" class="active">
+							          		<a tabindex="-1" href="#">无</a>
+							          	</li>
+										<li value="sum">
+											<a tabindex="-1" href="#">求和</a>
+										</li>
+										<li value="count">
+											<a tabindex="-1" href="#">统计个数</a>
+										</li>
+										<li value="mean">
+											<a tabindex="-1" href="#">平均值</a>
+										</li>
+										<li value="max">
+											<a tabindex="-1" href="#">最大值</a>
+										</li>
+										<li value="min">
+											<a tabindex="-1" href="#">最小值</a>
+										</li>
+										<li value="median">
+											<a tabindex="-1" href="#">中位值</a>
+										</li>
+							        </ul>
+								</li>
+								<li class="coordinate-filter"><a href="#"><i class="glyphicon glyphicon-filter"></i>&nbsp;筛选</a></li>
+								<li class="coordinate-remove"><a data-xItem='<%=JSON.stringify(xItem)%>' href="#"><i class="glyphicon glyphicon-remove"></i>&nbsp;移除</a></li>
+							</ul>
+						</li>
+    				<% }); %>
+				</ul>
+			</div>
+		</div>
+		
+		<div id="graph-feature" class="col-md-5 col-sm-5">
+			<ul class="clearfix row">
+			<% _.each(mapping, function(value, key){ %>
+				<%
+					switch(key){
+						case 'colour'	:%>
+											  <li class="feature-item col-md-4 col-sm-4"><label>颜色</label>
+											  	<div class="feature dragging-custom" name="<%=key%>">
+											  	<% if(value.column){%>
+											  		<span data-filedname="<%= value.column %>"><%= value.column %><b class="glyphicon glyphicon-remove"></b></span>
+											  	<%}%>
+											  	<div>
+											  </li> 
+											  <%break;
+						case 'size'  	:%>
+											  <li class="feature-item col-md-4 col-sm-4"><label>大小</label>
+											  	<div class="feature dragging-custom" name="<%=key%>">
+											  	<% if(value.column){%>
+											  		<span data-filedname="<%= value.column %>"><%= value.column %><b class="glyphicon glyphicon-remove"></b></span>
+											  	<%}%>
+											  	<div>
+											  </li>
+										 	  <% break;
+						case 'shape' :   %>   <li class="feature-item col-md-4 col-sm-4"><label>形状</label>
+												<div class="feature dragging-custom" name="<%=key%>">
+												<% if(value.column){%>
+													<span data-filedname="<%= value.column %>"><%= value.column %><b class="glyphicon glyphicon-remove"></b></span>
+												<%}%>
+												<div>
+											</li>
+										      <%break;
+						case 'linetype' :%>   <li class="feature-item col-md-4 col-sm-4"><label>线型</label>
+												<div class="feature dragging-custom" name="<%=key%>">
+												<% if(value.column){%>
+													<span data-filedname="<%= value.column %>"><%= value.column %><b class="glyphicon glyphicon-remove"></b></span>
+												<%}%>
+												<div>
+											  </li>
+										      <%break;
+						case 'fill' 	:%>   <li class="feature-item col-md-4 col-sm-4"><label>填充</label>
+												<div class="feature dragging-custom" name="<%=key%>">
+												<% if(value.column){%>
+												  <span data-filedname="<%= value.column %>"><%= value.column %><b class="glyphicon glyphicon-remove"></b></span>
+												<%}%>
+												<div>
+											  </li>
+											  <%break;
+						case 'group' 	:%>   <li class="feature-item col-md-4 col-sm-4"><label>分组</label>
+												<div class="feature dragging-custom" name="<%=key%>">
+												<% if(value.column){%>
+													<span data-filedname="<%= value.column %>"><%= value.column %><b class="glyphicon glyphicon-remove"></b></span>
+												<%}%>
+												<div>
+											  </li>
+						 					  <%break;
+						case 'weight' 	:%>   <li class="feature-item col-md-4 col-sm-4"><label>权重</label>
+													<div class="feature dragging-custom" name="<%=key%>">
+													<% if(value.column){%>
+														<span data-filedname="<%= value.column %>"><%= value.column %><b class="glyphicon glyphicon-remove"></b></span>
+													<%}%>
+													<div>
+											  </li>
+	 					  					  <%break;
+						case 'map_id' 	:%>   <li class="feature-item col-md-4 col-sm-4"><label>地图ID</label>
+												<div class="feature dragging-custom" name="<%=key%>">
+												<% if(value.column){%>
+													<span data-filedname="<%= value.column %>"><%= value.column %><b class="glyphicon glyphicon-remove"></b></span>
+												<%}%>
+												<div>
+											  </li>
+	  					  					  <%break;
+						case 'alpha' 	:%>   <li class="feature-item col-md-4 col-sm-4" ><label>阿尔法</label>
+												<div class="feature dragging-custom" name="<%=key%>">
+												<% if(value.column){%>
+													<span data-filedname="<%= value.column %>"><%= value.column %><b class="glyphicon glyphicon-remove"></b></span>
+												<%}%>
+												</div>
+											  </li>
+	  					  					  <%break;
+					}
+				%>
+    		<% }); %>
+			</ul>
+		</div>
+	</div>
+</script>
